@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Places</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Places We've Been</h1>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div id= "show-contact">
+            <h2></h2>
+
+            <p><span class="state-name"></span></p>
+
+          </div>
+        </div>
+          <h2>To where have you been?</h2>
+          <form id="location-input">
+            <div class="form-group">
+              <label for="state-name">State Name:</label>
+              <input type="text" class="form-control" id="new-state">
+            </div>
+
+
+            <div class="form-group">
+              <label for="landmark-name">Landmark:</label>
+              <input type="text" class="form-control" id="new-landmark">
+            </div>
+
+            <div class="form-group">
+              <label for="season-name">Season:</label>
+              <input type="text" class="form-control" id="new-season">
+            </div>
+          
+        </div>
+        <button type="submit" class="btn">Add</button>
+        </form>
+        <h2>Properties:</h2>
+        <ul id="properties">
+        </ul>
+          <br>
+          <br>
+          <ul id="show-properties">
+            <h1><p><span class ="state"></span></p></h1>
+            <p><span class ="landmark"></span></p>
+            <p><span class ="season"></span></p>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
