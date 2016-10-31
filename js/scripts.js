@@ -1,16 +1,18 @@
-//buinsess logic
-function Destination (state, landmark, season){
+//business logic
+function Location (state, landmark, season){
   this.state = state;
   this.landmark = landmark;
   this.season = season;
 }
 
-Destination.prototype.fullProperties = function() {
-  return this.state + <br> + this.landmark + <br> + this.season;
+Location.prototype.fullProperties = function() {
+  return this.state + " " + this.landmark + " " + this.season;
 }
+
+
 //user logic
-$(document).ready(function(){
-  $("form#location-input").submit(event){
+$(document).ready(function() {
+  $("form#location-input").submit(function(event) {
     event.preventDefault();
 
 
@@ -20,16 +22,23 @@ $(document).ready(function(){
 
     var newLocation = new Location(stateInput, landmarkInput, seasonInput);
 
-    $("ul#show-properties").append("<li><span class ='show-properties'>" + newLocation.fullProperties() + "</span></li>");
+    $("ul#show-properties").append("<li><span class ='property'>" + newLocation.state + "</span></li>");
+
+
+
+  $(".property").last().click(function() {
+    $("#show-properties").show();
+    $("#show-state").text(newLocation.state);
+    $(".stateName").text(newLocation.state);
+    $(".landmarkName").text(newLocation.landmark);
+    $(".seasonName").text(newLocation.season);
+});
+debugger;
 
     $("input#new-state").val("");
     $("input#new-landmark").val("");
     $("input#new-season").val("");
 
-$("")
-    $("#show-properties").show();
-
-
-});
+  });
 
 });

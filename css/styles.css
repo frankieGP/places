@@ -1,0 +1,12 @@
+/*#show-properties {
+  display: hidden;
+}*/
+
+.property {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.proper:hover {
+  text-decoration: underline;
+}
